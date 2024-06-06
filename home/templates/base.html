@@ -36,7 +36,7 @@
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{% url 'index' %}">
             <img src="{% static 'base/img/logo/logo-light-blue.svg' %}" alt="" width="120" height="120">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,13 +45,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="#">Promociones</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">LINK</a>
+                <a class="nav-link active" href="{% url 'products' %}">Productos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="#">Sobre nosotros</a>
@@ -64,44 +64,30 @@
                 </div>
             </form>
             <div class="dropdown nav-link">
-                <button
-                  class="btn dropdown-toggle fw-bold"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="fa-regular fs-4 fa-user text-info px-1"></i>
-                  Ingresa/Registrate
+                <button class="btn dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-regular fs-4 fa-user text-info px-1"></i>
+                    Ingresa/Registrate
                 </button>
                 <ul class="dropdown-menu">
-                  <li>
-                    <button class="dropdown-item d-block" type="button">
-                      <a
-                        class="text-decoration-none text-dark"
-                        href="inicioSesion.html"
-                        >Ingresar</a
-                      >
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      class="dropdown-item d-block text-success"
-                      type="button"
-                    >
-                      <a class="text-success fw-bold" href="registro.html"
-                        >Registrarse</a
-                      >
-                    </button>
-                  </li>
+                    <li>
+                        <button class="dropdown-item d-block" type="button">
+                            <a class="text-decoration-none text-dark" href="inicioSesion.html">Ingresar</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item d-block text-success" type="button">
+                            <a class="text-success fw-bold" href="registro.html">Registrarse</a>
+                        </button>
+                    </li>
                 </ul>
-              </div>
+            </div>
           </div>
         </div>
       </nav>
     <!--navbar end-->
 
     <!--content start-->
-    <div class="">
+    <div class="container-fluid">
         {% block content %}
         {% endblock content %}
     </div>
@@ -112,7 +98,9 @@
         <div class="container-fluid" id="BaseFooter">
             <div class="row p-5 bg-dark text-white">
                 <div class="col-sm-12 col-md-12 col-lg-3 ">
-                    <img class="img-fluid" src="{% static 'base/img/logo/logo-light-blue.svg' %}" alt="" width="200" height="200">
+                    <a class="" href="{% url 'index' %}">
+                        <img class="img-fluid" src="{% static 'base/img/logo/logo-light-blue.svg' %}" alt="" width="200" height="200">
+                    </a>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-3">
                     <p class="h5 mb-3">Centro de Ayuda</p>

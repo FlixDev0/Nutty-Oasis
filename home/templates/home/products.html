@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Productos - Nutty Oasis {% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'home/products.css' %}">
+{% endblock css %}
+
+
+{% block content %}
+    <div class="container-fluid">
+        <article>
+    
+        </article>
+        <div class="bg-info-subtle p-0">
+            <div class="row my-3 card-product d-flex justify-content-center">
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 py-3">
+                    <div style="width: 18rem">
+                        <a href="#">
+                            <img src="{% static 'home/img/pasas.jpeg' %}" alt="" width="300" height="300">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text fw-bol text-center">ciruelas pasas sin hueso, bandeja 45 gramos </p>
+                        </div>
+                        <!--create a star rating system-->
+                        <div class="justify-content-start">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            4.9
+                        </div>
+                        <div class="d-flex col-12">
+                            <a href="" class="btn btn-info text-center fw-bold text-white mx-2" data-bs-toggle="modal"
+                                data-bs-target="#">
+                                <img src="{% static 'home/img/buy.svg' %}" alt="">
+                            </a>
+                            <a href="" class="btn btn-info text-center fw-bold text-white mx-2" data-bs-toggle="modal"
+                                data-bs-target="#">
+                                <img src="{% static 'home/img/heart.svg' %}" alt="">
+                            </a>
+                            <a href="" class="btn btn-info text-center fw-bold text-white" data-bs-toggle="modal"
+                                data-bs-target="#">
+                                <img src="{% static 'home/img/compare.svg' %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block js %}
+    
+{% endblock js %}
